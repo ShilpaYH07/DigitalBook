@@ -1,0 +1,39 @@
+package com.signup.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.signup.model.RegisterUser;
+
+@Service
+public class SignUpServiceIMPL implements ISignUpService {
+
+	@Autowired
+	ISignupRepository signupRepository;
+
+	@Transactional
+	public Integer registerUser(RegisterUser user) {
+
+		RegisterUser savedUser=signupRepository.save(user);
+		return savedUser.getUserId();
+	}
+
+	@Override
+	public Optional<RegisterUser> findUserByEmail(String email) {
+		
+		
+		RegisterUser user=signupRepository.findByEmail(email);
+		return Optional.ofNullable(user);
+	}
+
+	@Override
+	public List<RegisterUser> getAllUser() {
+		return signupRepository.findAll();
+	}
+
+}
