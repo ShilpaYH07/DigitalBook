@@ -3,8 +3,6 @@ package com.signup.service;
 import java.util.List;
 import java.util.Optional;
 
-import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +14,7 @@ public class SignUpServiceIMPL implements ISignUpService {
 	@Autowired
 	ISignupRepository signupRepository;
 
-	@Transactional
+	@Override
 	public Integer registerUser(RegisterUser user) {
 
 		RegisterUser savedUser=signupRepository.save(user);

@@ -17,7 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableWebMvc
 @SpringBootApplication
-
+@EnableEurekaClient
 public class DigitalBooksBooksApplication {
 
 	public static void main(String[] args) {
