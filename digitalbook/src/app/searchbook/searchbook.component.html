@@ -1,0 +1,56 @@
+<!-- <app-navbaraftersignin></app-navbaraftersignin> -->
+<app-navbarbeforsignin></app-navbarbeforsignin>
+<div class="container">
+    
+<div style="width: 35%; float:left"> 
+<h3>Search Books</h3>
+<form>
+<div  class="form-group">
+  <p style="color: red;" value=`${null}`></p>
+  <label for="exampleInputEmail1">Title</label>
+  <input type="text" class="form-control" [(ngModel)] = "title" [ngModelOptions]="{standalone: true}" id="title" aria-describedby="emailHelp" placeholder="Enter the book tittle">
+</div>
+<div class="form-group">
+  <label for="exampleInputPassword1">Author</label>
+  <input type="text" class="form-control" id="author" [(ngModel)] = "author" [ngModelOptions]="{standalone: true}" placeholder="Enter the author name">
+</div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Publisher</label>
+    <input type="text" class="form-control" id="publisher" [(ngModel)] = "publisher" [ngModelOptions]="{standalone: true}" aria-describedby="emailHelp" placeholder="Enter the publisher name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Category</label>
+    <input type="text" class="form-control" id="Category" [(ngModel)] = "category" [ngModelOptions]="{standalone: true}" >
+  </div>
+<button type="submit"(click)="search()" class="btn btn-primary">Search</button>
+</form>
+</div>
+<div  style="width: 55%; float:right; margin-left: 50px;">
+  
+  <h5 style="margin-bottom: 25px;">Search Results</h5>
+  <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Book Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Category</th>
+          <th scope="col">Publisher</th>
+          <th scope="col">Published Date</th>
+          <!-- <th scope="col">Active</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of result">
+          <td>{{book.title}}</td>
+          <td>{{book.author}}</td>
+          <td>{{book.category}}</td>
+          <td>{{book.publisher}}</td>
+          <td>{{book.publishedDate}}</td>
+          <!-- <button class="btn btn-outline-success my-2 my-sm-0" routerLink="/" type="submit">Subscribe</button> -->
+          <!-- <td>{{book.boolean}}</td> -->
+        </tr>
+        
+      </tbody>
+    </table>
+</div>
+</div>

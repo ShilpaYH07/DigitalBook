@@ -1,0 +1,37 @@
+
+<app-navbarauthor></app-navbarauthor>
+
+<div class="container">
+    <h5 style="margin-bottom: 25px;">All Book List</h5>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Book Title</th>
+        <th scope="col">Author</th>
+        <!-- <th scope="col">Logo</th> -->
+        <th scope="col">Category</th>
+        <th scope="col">Price</th>
+        <th scope="col">Publisher</th>
+        <th scope="col">Published Date</th>
+        <th scope="col">Content</th>
+        <!-- <th scope="col">Active</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <th scope="row">{{book.authorId}}</th>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <!-- <td>{{book.logo}}</td> -->
+        <td>{{book.category}}</td>
+        <td>{{book.price}}</td>
+        <td>{{book.publisher}}</td>
+        <td>{{book.publishedDate}}</td>
+        <td>{{book.content}}</td>
+        <!-- <td>{{book.boolean}}</td> -->
+      </tr>
+      
+    </tbody>
+  </table>
+</div>

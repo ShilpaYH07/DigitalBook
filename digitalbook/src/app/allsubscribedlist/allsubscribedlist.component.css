@@ -1,0 +1,27 @@
+.container{
+    position: absolute;
+    top: 9%;
+    left: 20%;
+   
+    
+  
+      background-color: white;
+      border: 2px; 
+      border-style: solid;
+      border-color: grey;
+      justify-content: center;
+      border-radius: 15px;
+      width: 900px;
+      height: 600px;
+      margin: 50px;
+      text-align: center;
+      box-shadow: 10px 10px 10px rgb(140, 140, 140);
+      vertical-align: middle;
+  
+  }
+  
+  .btn{
+    margin-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }

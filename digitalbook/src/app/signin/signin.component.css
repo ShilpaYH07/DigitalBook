@@ -1,0 +1,24 @@
+.container{
+    margin: auto;
+    width: 500px;
+    margin-left: 450px;
+    margin-right: 100px;
+    border-style: solid;
+    border-color: grey;
+    box-shadow: 10px 10px 10px grey;
+    border-width: 0.5px;
+    border-radius: 10px;
+}
+.signup{
+    color: blue;
+}
+.dropdown-item{
+    margin-bottom: 20px;
+}
+.btn{
+    margin-top: 15px;
+}
+.custom-select{
+    margin-top: 15px;
+    margin-left: 12px;
+}

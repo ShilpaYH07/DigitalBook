@@ -1,0 +1,34 @@
+<app-navbarbeforsignin></app-navbarbeforsignin>
+<div class="container">
+    <form class="px-4 py-3">
+
+          <div class="form-group">
+            <label for="exampleDropdownFormEmail1">Firstname</label>
+            <input type="text" [(ngModel)] = "user.firstName" [ngModelOptions]="{standalone: true}" class="form-control" id="exampleDropdownFormEmail1" placeholder="Enter Firstname">
+          </div>
+          <div class="form-group">
+            <label for="exampleDropdownFormEmail1">Lastname</label>
+            <input type="text" [(ngModel)] = "user.lastName" [ngModelOptions]="{standalone: true}" class="form-control" id="exampleDropdownFormEmail1" placeholder="Enter Lastname">
+          </div>
+          <div class="form-group">
+            <label for="exampleDropdownFormEmail1">email</label>
+            <input type="email" [(ngModel)] = "user.email" [ngModelOptions]="{standalone: true}" class="form-control" id="exampleDropdownFormEmail1" placeholder="Enter Firstname">
+          </div>
+      <div class="form-group">
+        <label for="exampleDropdownFormPassword1">Password</label>
+        <input type="password"[(ngModel)] = "user.password" [ngModelOptions]="{standalone: true}" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label for="exampleDropdownFormPassword1">Select the role: </label>
+      <select class="custom-select" [(ngModel)] = "user.role" [ngModelOptions]="{standalone: true}">
+        <option value="1" >Author</option>
+        <option value="2" >Reader</option>
+        <option value="3" >Guest</option>
+      </select>
+    </div>
+ 
+      <button type="submit" (click)="signup()" routerLink="/signin" class="btn btn-primary">Sign up</button>
+    </form>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" routerLink="/signin">Already have an account ? <span class="signin">Sign in</span></a>
+  </div>

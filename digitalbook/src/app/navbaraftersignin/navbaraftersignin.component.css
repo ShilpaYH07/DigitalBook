@@ -1,0 +1,33 @@
+.align-top{
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    margin-left: 10px;
+}
+.navbar{
+    height: 90px;
+    margin-bottom: 25px;
+}
+.signinup{
+    align-content: flex-end;
+}
+.digtbook{
+    font-family: Arial, Helvetica, sans-serif;
+    color: whitesmoke;
+    font-size: 20px;
+    margin-top: 22px;
+}
+.sbl{
+    margin-left: 10px;
+}
+.nav1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-left: 800px;
+    color: blue;
+}
+.form1{
+    margin-top: 22px;
+    margin-left: 100px;
+}

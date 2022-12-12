@@ -1,0 +1,31 @@
+
+  <h5 style="margin-bottom: 25px;">Search Results</h5>
+  <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Book Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Logo</th>
+          <th scope="col">Category</th>
+          <th scope="col">Publisher</th>
+          <th scope="col">Published Date</th>
+          
+         
+          
+          <!-- <th scope="col">Active</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of resultbooks">
+          <td>{{book.title}}</td>
+          <td>{{book.author}}</td>
+          <td>{{book.logo}}</td>
+          <td>{{book.category}}</td>
+          <td>{{book.publisher}}</td>
+          <td>{{book.publishedDate}}</td>
+          <button class="btn btn-outline-success my-2 my-sm-0" routerLink="/" type="submit">Subscribe</button>
+          <!-- <td>{{book.boolean}}</td> -->
+        </tr>
+        
+      </tbody>
+    </table>
